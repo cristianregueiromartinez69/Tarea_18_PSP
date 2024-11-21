@@ -9,6 +9,8 @@ public class Main {
             new Thread(new Hilo(establecimiento, entradas, intentos)).start();
         }
     }
+
+
 }
 
 

@@ -1,6 +1,13 @@
 public class Main {
     public static void main(String[] args) {
 
+        Intentos intentos = new Intentos();
+        Entradas entradas = new Entradas();
+        Establecimiento establecimiento = new Establecimiento(entradas, intentos);
+
+        for(int i = 0; i < 200; i++){
+            new Thread(new Hilo(establecimiento, entradas, intentos)).start();
+        }
     }
 }
 

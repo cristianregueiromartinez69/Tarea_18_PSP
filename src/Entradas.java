@@ -2,9 +2,7 @@ public class Entradas {
 
     private int entradas = 50;
 
-    public synchronized void aumentarEntradas(){
-        entradas++;
-    }
+    private final int MIN_ENTRADAS = 0;
 
     public synchronized void disminuirEntradas(){
         entradas--;
@@ -12,5 +10,9 @@ public class Entradas {
 
     public synchronized int getEntradas(){
         return entradas;
+    }
+
+    public synchronized int getMinEntradas(){
+        return MIN_ENTRADAS;
     }
 }
